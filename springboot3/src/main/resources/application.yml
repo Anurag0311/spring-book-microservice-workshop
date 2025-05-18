@@ -1,0 +1,25 @@
+
+spring:
+  application:
+    name: spring-boot-microservice
+    description: Welcome to ${spring.application.name}
+  config:
+    import: "configserver:"
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+#my:
+#  greeting: Hello World Niggas
+#  list:
+#    values: One,Two,Three
+#
+#
+#db:
+#  connection: "{connection:'http://localhost:6969', username:'foo', password:'pass'}"
+#  host: 127.0.0.1
+#  port: 1200
+
+
+management.endpoints.web.exposure.include: "*"
+#spring.profiles.active: test
